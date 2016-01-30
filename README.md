@@ -1,29 +1,34 @@
-Adafruit Python DHT Sensor Library
-==================================
+This project is based on Adafruit Python DHT Sensor Library
+Copyright @ Adafruit
+===============================================================================
+##Project aim:
+- Read room's temperature and humidity by using DHT11
+- Update data to thingspeak.com
+My channel is: https://thingspeak.com/channels/82606
 
-Python library to read the DHT series of humidity and temperature sensors on a Raspberry Pi or Beaglebone Black.
+===============================================================================
+##How's to:
 
-Designed specifically to work with the Adafruit DHT series sensors ----> https://www.adafruit.com/products/385
+###Prepare:
+- 01 Raspberry Pi (I am using Pi2, B) with power suppy and wifi dongle (or ethernet)
+- 01 DTH11
+- Breakboard, wire
+- 1 4.7kOhm resister
 
-Currently the library is only tested with Python 2.6/2.7.
+###Installation:
+Read Adafruit README
 
-For all platforms (Raspberry Pi and Beaglebone Black) make sure your system is able to compile Python extensions.  On Raspbian or Beaglebone Black's Debian/Ubuntu image you can ensure your system is ready by executing:
+###Register an account on thingspeak.com. It's free!!
+Create a channel
+Read more here: https://www.mathworks.com/help/thingspeak/getting-started-with-thingspeak.html
+###Run:
+cd examples/
+vi AdafruitDHT.py (or nano AdafruitDHT.py)
+Add your API key (at line 61)
+save and quit vi
+-----
+./AdafruitDHT.py 11 4 (11 - DHT11, 4 - pin 4th of Pi)
 
-````
-sudo apt-get update
-sudo apt-get install build-essential python-dev
-````
+See the graph and customise you channel
 
-Install the library by downloading with the download link on the right, unzipping the archive, and executing:
-
-````
-sudo python setup.py install
-````
-
-See example of usage in the examples folder.
-
-Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
-
-Written by Tony DiCola for Adafruit Industries.
-
-MIT license, all text above must be included in any redistribution
+Viel Spaß ^^
